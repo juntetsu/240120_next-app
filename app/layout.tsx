@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/app/components/navigation";
+import Navigation from "@/app/components/Navigation";
 import AuthContext from "@/app/context/AuthContext";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
@@ -26,7 +26,7 @@ export default async function RootLayout({
         <div>
           <div className="flex min-h-screen flex-col">
             <Navigation
-              // currentUser={currentUser}
+              currentUser={currentUser}
             /> {/* ログインユーザーの情報を渡す */}
 
             <main className="container mx-auto max-w-screen-sm flex-1 px-1 py-5">{children}</main>
