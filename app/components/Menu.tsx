@@ -1,13 +1,13 @@
 "use client";
 
-import { use, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { signOut } from "next-auth/react";
 import { User } from "@prisma/client";
 
 import useLoginModal from "@/app/hooks/useLoginModal";
 import useSignupModal from "@/app/hooks/useSignupModal";
 import useProfileModal from "@/app/hooks/useProfileModal";
-import MenuItem from "@/app/components/navigation/MenuItem";
+import MenuItem from "@/app/components/MenuItem";
 import Image from "next/image";
 
 type MenuProps = {
@@ -45,7 +45,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
                 <MenuItem
                   label="プロフィール"
                   onClick={() => {
-                    profileModal.open();
+                    profileModal.onOpen();
                     setIsOpen(false);
                   }}
                 />
