@@ -1,8 +1,12 @@
+import getCurrentUser from "@/app/actions/getCurrentUser";
+
 // メインページ
-const Home = () => {
+const Home = async () => {
+  const currentUser = await getCurrentUser();
+  
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="text-center">
+      {currentUser ? <div>認証中</div> : <div>未認証</div>}
     </div>
   );
 };
