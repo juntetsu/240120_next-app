@@ -75,7 +75,7 @@ const Modal: React.FC<ModalProps> = ({
               {/* ヘッダー */}
               <div className="relative flex items-center justify-center border-b p-6">
                 {/* 閉じるボタン */}
-                <div className="absolute right-5 cursor-pointer rounded-full p-2 transition hover:bg-neutral-100">
+                <div className="absolute right-5 cursor-pointer rounded-full p-2 transition hover:bg-neutral-100" onClick={handleClose}>
                   <IoMdClose size={20} />
                 </div>
                 {/* タイトル */}
